@@ -1,3 +1,4 @@
+// import react from "react";
 import ExpenseItem from "./components/ExpenseItem";
 
 function App() {
@@ -62,6 +63,14 @@ function App() {
       <div>{expenseItems}</div></fieldset>
     </div>
   );
+
+  // return React.createElement(
+  //   "div",
+  //   {},
+  //   React.createElement("h2", {}, "Let's get started!"),
+  //   React.createElement('fieldset', {className: "app"},
+  //   React.createElement('div',{},expenseItems))
+  // );
 }
 
 export default App;
