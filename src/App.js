@@ -58,7 +58,8 @@ function App() {
   return (
     <div>
       <h2>Let's get started!</h2>
-      {expenseItems}
+      <fieldset className="app">
+      <div>{expenseItems}</div></fieldset>
     </div>
   );
 }
