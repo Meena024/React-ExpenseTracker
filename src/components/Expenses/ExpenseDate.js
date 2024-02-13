@@ -1,5 +1,5 @@
-import './ExpenseDate.css'
-import Card from '../UI/Card'
+import "./ExpenseDate.css";
+import Card from "../UI/Card";
 
 const ExpenseDate = (date_props) => {
   const month = date_props.date.toLocaleString("en-US", { month: "long" });
@@ -12,6 +12,6 @@ const ExpenseDate = (date_props) => {
       <div className="expense-date__day">{day}</div>
     </Card>
   );
-}
+};
 
 export default ExpenseDate;
