@@ -1,7 +1,5 @@
 import NewExpense from "./components/New Expense/NewExpense";
-import ExpenseItem from "./components/Expenses/ExpenseItem";
-import Card from "./components/UI/Card";
-import "./AppExpenses.css";
+import Expenses from "./components/Expenses/Expenses";
 
 const App = () => {
   const expenses = [
@@ -35,26 +33,16 @@ const App = () => {
     },
   ];
 
-  const expenseItems = expenses.map((expense) => (
-    <ExpenseItem
-      key={expense.id}
-      title={expense.title}
-      amount={expense.amount}
-      date={expense.date}
-      location={expense.location}
-    />
-  ));
-
   const addExpenseHandler = (expense) => {
     console.log("In App.js");
-    expenseItems.push(expense);
-    console.log(expenseItems);
+    expenses.push(expense);
+    console.log(expenses);
   };
   return (
     <div>
       <h2>Let's get started!</h2>
       <NewExpense onAddExpense={addExpenseHandler} />
-      <Card className="expenses">{expenseItems}</Card>
+      <Expenses expenseList = {expenses} />
     </div>
   );
 
